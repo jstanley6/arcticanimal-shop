@@ -1,7 +1,9 @@
 <template>
   <div class="home">
+    <Counter />
     <div class="bg">
       <products></products>
+
     </div>
   </div>
 </template>
@@ -10,11 +12,13 @@
 // @ is an alias to /src
 import HelloWorld from "@/components/NavBar.vue";
 import Products from "@/sections/Products";
+import Counter from "@/components/Counter.vue";
 
 export default {
   name: "home",
   components: {
     Products,
+    Counter,
     HelloWorld
   }
 };

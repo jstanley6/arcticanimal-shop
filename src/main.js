@@ -6,6 +6,7 @@ import jQuery from 'jquery';
 window.$ = window.jQuery = jQuery;
 import 'popper.js';
 import './assets/app.scss';
+import './assets/tailwind.css'
 
 createApp(App)
   .use(router)
