@@ -1,11 +1,12 @@
 <template>
-  <div v-if="loading">
+
+  <div>
     <Counter
     :year="2020"
     :month="11"
-    :date="25"
-    :hour="0"
-    :minute="0"
+    :date="24"
+    :hour="3"
+    :minute="2"
     :second="0"
     :millisecond="0"
     />

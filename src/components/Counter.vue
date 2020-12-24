@@ -1,7 +1,8 @@
 <template>
-  <div class="counter">
+  <div v-if="loaded" class="counter">
     <section class="text-3xl flex justify-content-center flex-column mx-auto text-center">
-      Countdown to new products
+      <h5 v-if="!expired">Countdown to new products</h5>
+      <h5 v-else>New products are being added</h5>
     </section>
       <section class="flex text-6xl justify-content-center">
         <div class="days mr-2 position-relative">
@@ -35,6 +36,7 @@ export default {
   data() {
     return {
       loaded: false,
+      expired: false,
       displayDays: 0,
       displayHours: 0,
       displayMinutes: 0,
@@ -81,6 +83,7 @@ export default {
         const distance = this.end.getTime() - now.getTime();
         if(distance < 0) {
           clearInterval(timer);
+          this.expired = true;
           return
         }
         const days = Math.floor(distance / this._days);
