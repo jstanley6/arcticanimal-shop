@@ -1,6 +1,14 @@
 <template>
-  <div class="home">
-    <Counter />
+  <div>
+    <Counter
+    :year="2020"
+    :month="11"
+    :date="25"
+    :hour="0"
+    :minute="0"
+    :second="0"
+    :millisecond="0"
+    />
     <div class="bg">
       <products></products>
 
