@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="loading">
     <Counter
     :year="2020"
     :month="11"
